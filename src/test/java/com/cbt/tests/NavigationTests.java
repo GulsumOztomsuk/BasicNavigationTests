@@ -1,7 +1,7 @@
 package com.cbt.tests;
 
+import com.cbt.utilities.Driver;
 import com.cbt.utilities.StringUtilities;
-import com.cbt.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class NavigationTests {
 
     public static void main(String[] args) {
-        WebDriver driver=WebDriverFactory.getDriver("chrome");
+        WebDriver driver= Driver.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
@@ -37,7 +37,7 @@ public class NavigationTests {
         System.out.println("--------------------------------");
 
 
-         WebDriver driver2=WebDriverFactory.getDriver("firefox");
+         WebDriver driver2=Driver.getDriver("firefox");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
@@ -65,7 +65,7 @@ public class NavigationTests {
 
         System.out.println("----------------------------");
 
-       WebDriver driver3=WebDriverFactory.getDriver("edge");
+       WebDriver driver3=Driver.getDriver("edge");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
